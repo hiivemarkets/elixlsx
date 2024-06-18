@@ -84,7 +84,7 @@ defmodule Elixlsx.Writer do
 
   @spec get_xl_styles_xml(Workbook.t(), WorkbookCompInfo.t()) :: zip_tuple
   def get_xl_styles_xml(workbook, wci) do
-    {'xl/styles.xml', XMLTemplates.make_xl_styles(workbook, wci)}
+    {~c"xl/styles.xml", XMLTemplates.make_xl_styles(workbook, wci)}
   end
 
   @spec get_xl_workbook_xml(Workbook.t(), [SheetCompInfo.t()]) :: zip_tuple
