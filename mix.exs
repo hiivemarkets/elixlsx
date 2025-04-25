@@ -24,10 +24,13 @@ defmodule Elixlsx.Mixfile do
 
   defp deps do
     [
-      {:credo, "~> 1.6", only: [:dev, :test], runtime: false},
-      {:propcheck, "~> 1.4", only: [:dev, :test]},
+      {:floki, "~> 0.36.2", only: [:dev, :test]},
+      {:triq, "~> 1.3.0", only: :test},
+      {:credo, "~> 1.7.7", only: [:dev, :test]},
       {:ex_doc, ">= 0.0.0", only: [:dev], runtime: false},
-      {:dialyxir, "~> 1.0", only: [:dev], runtime: false}
+      {:dialyxir, "~> 1.0", only: [:dev], runtime: false},
+      {:sweet_xml, "~> 0.7.1", only: :test},
+      {:propcheck, "~> 1.4", only: [:dev, :test]}
     ]
   end
 
